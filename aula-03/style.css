@@ -1,0 +1,28 @@
+.film-poster {
+  max-height: 50vh;
+}
+
+.header {
+  background: #14181C;
+  padding: 2vh 2vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header h1 a {
+  text-decoration: none;
+}
+
+.header-nav {
+  display: flex;
+}
+
+.header-nav li a {
+  padding: 10px;
+  color: #657788;
+  text-decoration: none;
+}
+
+.film-info {
+  display: flex;
+}
