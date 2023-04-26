@@ -1,0 +1,32 @@
+body {
+  max-width: 600px;
+  margin: 60px auto;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.botao-enviar {
+  width: 200px;
+  padding: 10px;
+  align-self: center;
+  border: none;
+  background-color: grey;
+  color: whitesmoke;
+  margin-top: 20px;
+  transition: ease-in-out 100ms;
+}
+
+.botao-enviar:hover {
+  background-color: black;
+  transition: ease-in-out 100ms;
+  cursor: pointer;
+}
+
+.max-input-width {
+  width: 33%;
+}
