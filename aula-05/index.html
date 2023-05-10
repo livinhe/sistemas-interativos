@@ -10,40 +10,48 @@
 <body>
   <form action="processa.php" method="POST" enctype="application/x-www-form-urlencoded" class="formulario">
     <label for="nome_completo">Nome completo</label>
-    <input type="text" name="nome_completo">
+    <input type="text" name="nome_completo" class="max-input-width">
 
     <label for="email_institucional">E-mail institucional</label>
-    <input type="email" name="email_institucional">
+    <input type="email" name="email_institucional" class="max-input-width">
 
     <label for="senha">Senha</label>
-    <input type="password" name="senha">
-
-    <label for="numero_matricula">Número de matrícula</label>
-    <input type="number" name="numero_matricula" class="max-input-width">
-
-    <label for="genero">Gênero</label>
-    <select name="genero" class="max-input-width">
-      <option value="feminino">Feminino</option>
-      <option value="masculino">Masculino</option>
-      <option value="none">Prefiro não responder</option>
-    </select>
-
-    <label for="data_nascimento">Data de nascimento</label>
-    <input type="date" name="data_nascimento" class="max-input-width">
+    <input type="password" name="senha" class="max-input-width">
+    
+    <div class="row">
+      <div class="col">
+        <label for="numero_matricula">Número de matrícula</label>
+        <input type="number" name="numero_matricula">
+      </div>
+      
+      <div class="col">
+        <label for="genero">Gênero</label>
+        <select name="genero">
+          <option value="feminino">Feminino</option>
+          <option value="masculino">Masculino</option>
+          <option value="none">Prefiro não responder</option>
+        </select>
+      </div>
+      
+      <div class="col">
+        <label for="data_nascimento">Data de nascimento</label>
+        <input type="date" name="data_nascimento">
+      </div>
+    </div>
 
     <label for="curriculo">Breve currículo</label>
-    <textarea name="curriculo" cols="30" rows="10"></textarea>
+    <textarea name="curriculo" cols="30" rows="5"></textarea>
 
     <label for="">Disciplinas que deseja cursar:</label>
     <div>
-      <input type="checkbox" name="design_computacional">
-      <label for="design_computacional">Design Computacional 14</label>
+      <input type="checkbox" name="disciplinas[]" multiple value="Design Computacional 14">
+      <label for="">Design Computacional 14</label>
       <br>      
-      <input type="checkbox" name="pic_666">
-      <label for="pic_666">PIC 666</label>
+      <input type="checkbox" name="disciplinas[]" multiple value="PIC 666">
+      <label for="">PIC 666</label>
       <br>
-      <input type="checkbox" name="topicos_especiais_desenho_papiro">
-      <label for="topicos_especiais_desenho_papiro">Tópicos Especiais em Desenho Técnico com Papiro</label>
+      <input type="checkbox" name="disciplinas[]" multiple value="Tópicos Especiais em Desenho Técnico com Papiro">
+      <label for="">Tópicos Especiais em Desenho Técnico com Papiro</label>
     </div>
 
     <input type="submit" value="Enviar" name="form_post" class="botao-enviar">
