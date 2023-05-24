@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade: Formatando formulários</title>
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+<body class="bg-primary-subtle">
+  <main class="container m-auto p-4">
+    <h1 class="text-center text-dark fs-4 font-monospace mb-4">Atividade: Formatando formulários</h1>
+    <form action="processa.php" method="POST" enctype="application/x-www-form-urlencoded" class="p-4 rounded bg-body">
+      <div class="mb-3">
+        <label for="nome_completo" class="form-label">Nome completo</label>
+        <input type="text" name="nome_completo" class="form-control" placeholder="Seu nome completo">
+      </div>
+      
+      <div class="mb-3">
+        <label for="email_institucional" class="form-label">E-mail institucional</label>
+        <input type="email" name="email_institucional" class="form-control" placeholder="email@email.com">
+      </div>
+      
+      <div class="mb-3">
+        <label for="senha" class="form-label">Senha</label>
+        <input type="password" name="senha" class="form-control">
+      </div>
+      
+      <div class="row">
+        <div class="col mb-3">
+          <label for="numero_matricula" class="form-label" style="
+        white-space: nowrap;">Número de matrícula</label>
+        <input type="number" name="numero_matricula" class="form-control">
+      </div>
+      
+      <div class="col mb-3">
+        <label for="data_nascimento" class="form-label" style="
+        white-space: nowrap;">Data de nascimento</label>
+        <input required type="date" name="data_nascimento" class="form-control">
+      </div>
+      
+      <div class="col mb-3">
+        <label for="genero" class="form-label">Gênero</label>
+        <select name="genero" class="form-select">
+          <option value="feminino">Feminino</option>
+          <option value="masculino">Masculino</option>
+          <option selected value="none">Prefiro não responder</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="mb-3">
+      <label for="curriculo" class="form-label">Breve currículo</label>
+      <textarea name="curriculo" cols="30" rows="5" class="form-control" placeholder="Conte um pouco mais sobre você..."></textarea>
+    </div>
+    
+    <label for="" class="form-label">Disciplinas que deseja cursar:</label>
+    <div class="mb-3">
+      <input type="checkbox" name="disciplinas[]" multiple value="Design Computacional 14" class="form-check-input">
+      <label for="" class="form-check-label">Design Computacional 14</label>
+      <br>      
+      <input type="checkbox" name="disciplinas[]" multiple value="PIC 666" class="form-check-input">
+      <label for="" class="form-check-label">PIC 666</label>
+      <br>
+      <input type="checkbox" name="disciplinas[]" multiple value="Tópicos Especiais em Desenho Técnico com Papiro" class="form-check-input">
+      <label for="" class="form-check-label">Tópicos Especiais em Desenho Técnico com Papiro</label>
+    </div>
+    <div class="row justify-content-center">
+      <input type="submit" value="Enviar" name="form_post" class="btn btn-primary w-25">
+    </div>
+  </form>
+</main>
+</body>
+</html>
