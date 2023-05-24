@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade: Formatando formulários</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <form action="processa.php" method="POST" enctype="application/x-www-form-urlencoded" class="formulario">
+    <label for="nome_completo">Nome completo</label>
+    <input type="text" name="nome_completo" class="max-input-width">
+
+    <label for="email_institucional">E-mail institucional</label>
+    <input type="email" name="email_institucional" class="max-input-width">
+
+    <label for="senha">Senha</label>
+    <input type="password" name="senha" class="max-input-width">
+    
+    <div class="row">
+      <div class="col">
+        <label for="numero_matricula">Número de matrícula</label>
+        <input type="number" name="numero_matricula">
+      </div>
+      
+      <div class="col">
+        <label for="genero">Gênero</label>
+        <select name="genero">
+          <option value="feminino">Feminino</option>
+          <option value="masculino">Masculino</option>
+          <option value="none">Prefiro não responder</option>
+        </select>
+      </div>
+      
+      <div class="col">
+        <label for="data_nascimento">Data de nascimento</label>
+        <input required type="date" name="data_nascimento">
+      </div>
+    </div>
+
+    <label for="curriculo">Breve currículo</label>
+    <textarea name="curriculo" cols="30" rows="5"></textarea>
+
+    <label for="">Disciplinas que deseja cursar:</label>
+    <div>
+      <input type="checkbox" name="disciplinas[]" multiple value="Design Computacional 14">
+      <label for="">Design Computacional 14</label>
+      <br>      
+      <input type="checkbox" name="disciplinas[]" multiple value="PIC 666">
+      <label for="">PIC 666</label>
+      <br>
+      <input type="checkbox" name="disciplinas[]" multiple value="Tópicos Especiais em Desenho Técnico com Papiro">
+      <label for="">Tópicos Especiais em Desenho Técnico com Papiro</label>
+    </div>
+
+    <input type="submit" value="Enviar" name="form_post" class="botao-enviar">
+  </form>
+</body>
+</html>

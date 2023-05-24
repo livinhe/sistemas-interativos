@@ -1,0 +1,89 @@
+body {
+  max-width: 680px;
+  margin: 40px auto;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: white;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: whitesmoke;
+  padding: 40px;
+}
+
+.botao-enviar {
+  width: 200px;
+  padding: 10px;
+  align-self: center;
+  border: none;
+  background-color: grey;
+  color: whitesmoke;
+  margin-top: 20px;
+  transition: ease-in-out 300ms;
+  border-radius: 2px;
+}
+
+.botao-enviar:hover {
+  background-color: black;
+  transition: ease-in-out 300ms;
+  cursor: pointer;
+  transform: scale(1.10);
+}
+
+select{
+  max-width: -webkit-fill-available;
+}
+
+label {
+  margin-top: 3px;
+}
+
+input, select {
+  padding: 3px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.respostas {
+  margin: 0 auto;
+  max-width: max-content;
+  background-color: whitesmoke;
+  padding: 40px;
+}
+
+@media screen and (max-width: 630px) {
+    .row {
+      justify-content: start;
+      gap: 10px;
+    }
+    body {
+      margin: 0 auto;
+    }
+    .formulario {
+      padding: 20px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    align-items: start;
+    background-color: whitesmoke;
+  }
+  .formulario {
+    margin: auto;
+  }
+}
